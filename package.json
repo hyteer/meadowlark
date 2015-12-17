@@ -1,0 +1,27 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "A Web site for learning nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyteer/meadowlark.git"
+  },
+  "keywords": [
+    "meadowlark",
+    "learning",
+    "nodejs"
+  ],
+  "author": "hyteer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyteer/meadowlark/issues"
+  },
+  "homepage": "https://github.com/hyteer/meadowlark#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

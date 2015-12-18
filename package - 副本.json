@@ -23,7 +23,6 @@
   "homepage": "https://github.com/hyteer/meadowlark#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "express-handlebars": "^2.0.1",
     "handlebars": "^4.0.5"
   }
 }

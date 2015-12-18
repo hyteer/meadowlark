@@ -1,6 +1,18 @@
 var express = require('express')
-
 var app = express();
+
+//Add dir 'public' as static resource
+app.use(express.static(__dirname + '/public'));
+
+// Fortunes for user's cookie
+var fortunes = [
+	"Conquer your fears or they will conquer you.",
+	"Rivers need springs.",
+	"Do not fear what you don't know.",
+	"You will have a pleasant surprise.",
+	"Whenever possible, keep it simple.",
+];
+
 
 //set up handlebars view engine
 var exphbs = require('express-handlebars');
@@ -22,14 +34,14 @@ app.get('/', function(req, res){
 	res.render('home');
 });
 app.get('/about', function(req, res){
-	res.render('about')
+	var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+	res.render('about', { fortune: randomFortune });
 });
 
 app.get('/about/yt', function(req, res){
 	res.type('text/plain');
 	res.send('About YT...');
 });
-
 
 //custom 404 page
 app.use(function(req, res){
@@ -44,7 +56,11 @@ app.use(function(req, res){
 	res.render(500);
 });
 
+
+
+
 app.listen(app.get('port'), function(){
    console.log('Express started on http://localhost: ' + 
 	app.get('port') + '; press ctrl+C to terminate.');
 });
+

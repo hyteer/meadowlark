@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/hyteer/meadowlark#readme",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
+    "formidable": "^1.0.17",
     "handlebars": "^4.0.5"
   }
 }

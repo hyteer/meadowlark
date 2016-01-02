@@ -3,10 +3,24 @@
 <head>
     <title>Meadowlark Travel</title>
     {{{_sections.head}}}
-    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 <body>
     <header><img src="/img/logo.png" alt="Meadowlark Travel Logo"></header>
+
+    {{#if flash}}
+        <div  class="flashalert">
+            <div class="alert alert-dismissible alert-{{flash.type}}">
+                <button type="button" class="close"
+                        data-dismiss="alert" aria-hidden="true">&times;<button>
+                    <strong>{{flash.intro}}</strong> {{{flash.message}}}
+            </div>
+        </div>
+    {{/if}}
+
     {{{body}}}
 
 
@@ -18,5 +32,6 @@
     <script src="/vendor/jquery/jquery-2.1.4.min.js"></script>
     {{{_sections.jquery}}}
 
+    <script src="/vendor/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>
